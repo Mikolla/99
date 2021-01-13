@@ -3,25 +3,29 @@ package streams;
 import java.util.Arrays;
 import java.util.Optional;
 
+import javax.annotation.Nullable;
+
+import org.junit.Assert;
+import org.junit.Test;
+
 public class NoRepeats
 {
-    public static void main(String[] args)
+    @Nullable
+    String noRepeatSber(String stringSber)
     {
-        /*
-Stream<String> wordsStream = Stream.of("мама", "мыла", "раму");
-Optional<String> sentence = wordsStream.reduce((x,y)->x + " " + y);
-System.out.println(sentence.get());
-         */
+        String[] split = stringSber.split("");
+        Optional<String> resultOpt = Arrays.stream(split).reduce((x, y) ->
+                x.endsWith(y) || x.endsWith(y.toLowerCase()) || x.endsWith(y.toUpperCase()) ? x : x + y);
+        return resultOpt.orElse(null);
+    }
+
+    @Test
+    public void sberNorepeatTest()
+    {
         String dataString = "Сссбббеерр, пррриииввеетттт! Как дела? А?";
-        String[] split = dataString.split("");
-        Optional<String> reduce = Arrays.stream(split).reduce((x, y) ->
-        {
-            if (x.endsWith(y) || x.endsWith(y.toLowerCase()) || x.endsWith(y.toUpperCase()))
-            {
-                return x;
-            }
-            return x + y;
-        });
-        System.out.println(reduce.get());
+        String expected = "Сбер, привет! Как дела? А?";
+        NoRepeats noRepeats = new NoRepeats();
+        String actual = noRepeats.noRepeatSber(dataString);
+        Assert.assertEquals(expected, actual);
     }
 }
