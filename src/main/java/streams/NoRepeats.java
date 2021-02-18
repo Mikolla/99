@@ -3,14 +3,13 @@ package streams;
 import java.util.Arrays;
 import java.util.Optional;
 
-import javax.annotation.Nullable;
 
 import org.junit.Assert;
 import org.junit.Test;
 
 public class NoRepeats
 {
-    @Nullable
+
     String noRepeatSber(String stringSber)
     {
         String[] split = stringSber.split("");
