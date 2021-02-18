@@ -54,8 +54,9 @@ public class QuickSort
     {
         int[] a = new int[] { 9, 5, 7, 4, 2, 8, 3, 1, 6, 0 };
         int[] expected = new int[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
-        QuickSort quickSort = new QuickSort();
-        quickSort.quickSort(a, 0, a.length - 1);
+        /*QuickSort quickSort = new QuickSort();
+        quickSort.quickSort(a, 0, a.length - 1);*/
+        MeasureTime.measureTime(() -> quickSort(a, 0, a.length - 1));
         Optional<String> resultStr = Arrays.stream(a).mapToObj(x -> String.valueOf(x)).reduce((c, d) -> c + " " + d);
         System.out.println(resultStr.get());
         assertArrayEquals(expected, a);
