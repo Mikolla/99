@@ -31,6 +31,6 @@ public class FindMaxInListByStream
         int expected = 6;
         int actual = findMaxByStream(ints);
         Assert.assertEquals(expected, actual);
-        System.out.println("work");
+        System.out.println("works");
     }
 }
