@@ -11,7 +11,8 @@ import java.util.stream.IntStream;
  * Поиск индекса максимального элемента в списке при помощи стримов, особеннсть в том, что возвращается не
  * максимумальный элемент, а его индекс в списке
  */
-public class FindMaxInCollectionByStream {
+public class FindMaxInListByStream
+{
 
     /**
      * Получение индекса максимального элемента в списке при помощи стримов
