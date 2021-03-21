@@ -17,7 +17,7 @@ public class FindMaxInListByStream
     /**
      * Получение индекса максимального элемента в списке при помощи стримов
      * @param list список интов
-     * @return первый индекс максимального элемента из принятого списка
+     * @return первый индекс максимального элемента из принятого списка (max элементов м.б. несколько)
      */
     public static int findMaxByStream(List<Integer> list) {
 
