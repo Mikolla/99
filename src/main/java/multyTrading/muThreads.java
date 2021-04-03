@@ -1,3 +1,5 @@
+package multyTrading;
+
 public class muThreads
 {
     public static void main(String[] args) throws InterruptedException
@@ -9,19 +11,19 @@ public class muThreads
         Tred t3 = new Tred();
         t3.setName("t3");
 
-        /*t1.start();
+        t1.start();
         t1.join();
         t2.join();
         t2.start();
         t3.join();
-        t3.start();*/
+        t3.start();
 
-        //t3.join();
+        /*t3.join();
         t3.start();
         t2.join();
-        //t2.start();
+        t2.start();
         t1.join();
-        //t1.start();
+        t1.start();*/
 
 
     }
